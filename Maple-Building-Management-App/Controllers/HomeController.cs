@@ -72,7 +72,7 @@ namespace Maple_Building_Management_App.Controllers
                     model.EmailAddress, 
                     model.Tenant, 
                     model.PropertyCode);
-                return RedirectToAction("Index");
+                return View("SuccessfulRegister", model);
             }
 
             return View();
@@ -105,7 +105,7 @@ namespace Maple_Building_Management_App.Controllers
                     (int) Enum.Parse(typeof(ComplaintStatus), model.ComplaintStatus),
                     (int) Enum.Parse(typeof(ComplaintType), model.ComplaintType)
                 );
-                return RedirectToAction("Index");
+                return View("SuccessfulComplaint",model);
             }
 
             return View();
